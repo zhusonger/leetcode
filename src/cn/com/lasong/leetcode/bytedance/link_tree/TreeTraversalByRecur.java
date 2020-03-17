@@ -1,5 +1,8 @@
 package cn.com.lasong.leetcode.bytedance.link_tree;
 
+import cn.com.lasong.leetcode.common.TreeNode;
+import cn.com.lasong.leetcode.common.NodeHelper;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +16,7 @@ import java.util.List;
 public class TreeTraversalByRecur {
 
     public static void main(String[] args) {
-        TreeNode tree = ZNodeHelper.createTree(new Integer[]{3,9,20,null,null,15,7}, 0);
+        TreeNode tree = NodeHelper.createTree(new Integer[]{3,9,20,null,null,15,7}, 0);
         TreeTraversalByRecur treeTraversal = new TreeTraversalByRecur();
         // 前序遍历 3 9 20 15 7
         List<Integer> ans = new ArrayList<>();

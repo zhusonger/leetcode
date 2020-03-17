@@ -1,5 +1,8 @@
 package cn.com.lasong.leetcode.bytedance.link_tree;
 
+import cn.com.lasong.leetcode.common.ListNode;
+import cn.com.lasong.leetcode.common.NodeHelper;
+
 /**
  * Author: zhusong
  * Email: song.zhu@lasong.com.cn
@@ -22,11 +25,11 @@ package cn.com.lasong.leetcode.bytedance.link_tree;
 public class AddTwoNumbers {
 
     public static void main(String[] args) {
-        ListNode l1 = ZNodeHelper.createList(new Integer[]{1, 1, 9});
-        ListNode l2 = ZNodeHelper.createList(new Integer[]{5, 6, 4});
+        ListNode l1 = NodeHelper.createList(new Integer[]{1, 1, 9});
+        ListNode l2 = NodeHelper.createList(new Integer[]{5, 6, 4});
         AddTwoNumbers addTwoNumbers = new AddTwoNumbers();
         ListNode head = addTwoNumbers.addTwoNumbers(l1, l2);
-        ZNodeHelper.print(head);
+        NodeHelper.print(head);
     }
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {

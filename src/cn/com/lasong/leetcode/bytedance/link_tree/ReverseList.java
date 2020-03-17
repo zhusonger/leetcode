@@ -1,5 +1,8 @@
 package cn.com.lasong.leetcode.bytedance.link_tree;
 
+import cn.com.lasong.leetcode.common.ListNode;
+import cn.com.lasong.leetcode.common.NodeHelper;
+
 /**
  * Author: zhusong
  * Email: song.zhu@lasong.com.cn
@@ -20,7 +23,7 @@ public class ReverseList {
 
     public static void main(String[] args) {
         ReverseList reverseList = new ReverseList();
-        reverseList.reverseList(ZNodeHelper.createList(new Integer[] {1,2,3,4,5}));
+        reverseList.reverseList(NodeHelper.createList(new Integer[] {1,2,3,4,5}));
     }
 
     public ListNode reverseList(ListNode head) {

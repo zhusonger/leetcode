@@ -1,4 +1,7 @@
-package cn.com.lasong.leetcode.bytedance.link_tree;
+package cn.com.lasong.leetcode.common;
+
+import cn.com.lasong.leetcode.common.ListNode;
+import cn.com.lasong.leetcode.common.TreeNode;
 
 /**
  * Author: zhusong
@@ -6,7 +9,7 @@ package cn.com.lasong.leetcode.bytedance.link_tree;
  * Date: 2020-03-17
  * Description:
  */
-public class ZNodeHelper {
+public class NodeHelper {
 
     public static ListNode createList(Integer[] array) {
         if (null == array || array.length == 0) {

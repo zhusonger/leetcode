@@ -43,19 +43,9 @@ public class MaxSubArray {
         if (nums.length == 1) {
             return nums[0];
         }
-        int ans = method2(nums);
-        return ans;
-    }
-
-    /**
-     * 贪心算法
-     * @param nums
-     * @return
-     */
-    private int method1(int[] nums) {
         int ans = 0;
-        int length = nums.length;
-        int sum = 0;
+
+        // 贪心
         // 每次都会比较
         // == 本次最大值 ==
         // 如果本次相加结果比较 与 当前值比较
@@ -63,36 +53,26 @@ public class MaxSubArray {
         // 2. 否则还是使用累加的值
         // == 全局最大值 ==
         // 每一步都与之前全局的最大值比较, 取大值作为结果
-        for (int i = 0; i < length; i++) {
+        int sum = 0;
+        for (int i = 0; i < nums.length; i++) {
             sum = Math.max(nums[i], nums[i] + sum);
-            ans = Math.max(ans, sum);
+            ans = Math.max(sum, ans);
         }
-        return ans;
-    }
+        System.out.println("贪心:" + ans);
 
-    /**
-     * 动态规划
-     * @param nums
-     * @return
-     */
-    public int method2(int[] nums) {
-        int length = nums.length;
-        int ans = 0;
-        for (int i = 0; i < length; i++) {
-            // 之前的位置更新为
-            int index = Math.max(0, i - 1);
-            int pre = nums[index];
-            int current = nums[i];
-            // 如果前面的值大于等于0 表示还是正直, 向上增长的,
+        // 动态规划
+        ans = 0;
+        for (int i = 0; i < nums.length; i++) {
+            int pre = nums[Math.max(0, i - 1)];
+            int cur = nums[i];
+            // 如果前面的值大于等于0 表示还是正值, 向上增长的
             // 否则就是负值, 添加没有意义, 重新计数
             if (pre >= 0) {
-                nums[i] = current + pre;
+                nums[i] = cur + pre;
             }
-            // 更新当前值
-            current = nums[i];
-            ans = Math.max(current, ans);
+            ans = Math.max(ans, nums[i]);
         }
-
+        System.out.println("动态规划:" + ans);
         return ans;
     }
 }

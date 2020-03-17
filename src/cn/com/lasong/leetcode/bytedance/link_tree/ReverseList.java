@@ -19,19 +19,8 @@ package cn.com.lasong.leetcode.bytedance.link_tree;
 public class ReverseList {
 
     public static void main(String[] args) {
-        int[] array = new int[] {1,2,3,4,5};
-        ListNode head = new ListNode(array[0]);
-        ListNode ptr = head;
-        for (int item : array) {
-            if (item == 1) {
-                continue;
-            }
-            ListNode node = new ListNode(item);
-            ptr.next = node;
-            ptr = node;
-        }
         ReverseList reverseList = new ReverseList();
-        reverseList.reverseList(head);
+        reverseList.reverseList(ZNodeHelper.createList(new int[] {1,2,3,4,5}));
     }
 
     public ListNode reverseList(ListNode head) {
@@ -47,6 +36,7 @@ public class ReverseList {
         // 返回反转head
         ListNode rHead = null;
         while (head != null) {
+            System.out.println(head.val);
             ListNode next = head.next; // next 2      next 3        next null
             head.next = pre; // head(1).next = pre(null)  head(2).next = pre(1)  head(3).next = pre(2)
             pre = head; // pre = head(1)    pre = head(2) pre = head(3)

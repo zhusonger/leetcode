@@ -20,7 +20,7 @@ public class ReverseList {
 
     public static void main(String[] args) {
         ReverseList reverseList = new ReverseList();
-        reverseList.reverseList(ZNodeHelper.createList(new int[] {1,2,3,4,5}));
+        reverseList.reverseList(ZNodeHelper.createList(new Integer[] {1,2,3,4,5}));
     }
 
     public ListNode reverseList(ListNode head) {
@@ -36,7 +36,7 @@ public class ReverseList {
         // 返回反转head
         ListNode rHead = null;
         while (head != null) {
-            System.out.println(head.val);
+//            System.out.println(head.val);
             ListNode next = head.next; // next 2      next 3        next null
             head.next = pre; // head(1).next = pre(null)  head(2).next = pre(1)  head(3).next = pre(2)
             pre = head; // pre = head(1)    pre = head(2) pre = head(3)

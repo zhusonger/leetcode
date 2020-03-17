@@ -8,7 +8,10 @@ package cn.com.lasong.leetcode.bytedance.link_tree;
  */
 public class ZNodeHelper {
 
-    public static ListNode createList(int[] array) {
+    public static ListNode createList(Integer[] array) {
+        if (null == array || array.length == 0) {
+            return null;
+        }
         ListNode head = null;
         ListNode ptr = null;
         for (int item : array) {
@@ -23,6 +26,17 @@ public class ZNodeHelper {
         }
 
         return head;
+    }
+
+    public static TreeNode createTree(Integer[] array, int index) {
+        if (null == array || array.length == 0 || index >= array.length || array[index] == null) {
+            return null;
+        }
+        int value = array[index];
+        TreeNode root = new TreeNode(value);
+        root.left = createTree(array, index * 2 + 1);
+        root.right = createTree(array, index * 2 + 2);
+        return root;
     }
 
     public static void print(ListNode node) {

@@ -8,8 +8,12 @@
 
 # 项目结构
 
-按照LeetCode里公司的模块, 他的分类来分包
+按照LeetCode里公司/功能等来分包
 
 ## bytedance
 
 字节跳动算法题
+
+## everyday
+
+LeetCode 每日一题

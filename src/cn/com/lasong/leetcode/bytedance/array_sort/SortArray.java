@@ -53,7 +53,7 @@ public class SortArray {
         System.arraycopy(nums, 0, temp, 0, len);
         ListHelper.print(sortArray.insertSort(temp));
         System.arraycopy(nums, 0, temp, 0, len);
-        ListHelper.print(sortArray.quickSort(new int[]{7, 6, 5, 4, 3, 2, 1}));
+        ListHelper.print(sortArray.quickSort(temp));
     }
     public List<Integer> sortArray(int[] nums) {
         List<Integer> list = bubbleSort(nums);
@@ -303,7 +303,7 @@ public class SortArray {
 //        6,6,5,6
 //        1,1,1,3
 //        3,3,2,3
-        System.out.println(pLeft+"," + pRight +"," + left+","+ right);
+//        System.out.println(pLeft+"," + pRight +"," + left+","+ right);
         // 更新基准值到顺序中的位置
         // ====以右侧为基准时的值===
         nums[right] = nums[pLeft];

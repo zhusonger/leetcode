@@ -1,5 +1,7 @@
 package cn.com.lasong.leetcode.common;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -16,8 +18,19 @@ public class ListHelper {
         }
         StringBuilder builder = new StringBuilder();
         for (Object item : list) {
-            builder.append(item);
+            builder.append(item).append(",");
+        }
+        if(builder.length() > 0) {
+            builder.deleteCharAt(builder.length() - 1);
         }
         System.out.println(builder.toString());
+    }
+
+    public static void print(int[] ans) {
+        List<Integer> list = new ArrayList<>();
+        for (int item : ans) {
+            list.add(item);
+        }
+        print(list);
     }
 }

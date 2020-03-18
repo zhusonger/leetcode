@@ -348,7 +348,7 @@ public class SortArray {
 //        0,0,0,3
 //        3,3,1,3
 //        1,1,1,2
-        System.out.println(pLeft+"," + pRight +"," + left+","+ right);
+//        System.out.println(pLeft+"," + pRight +"," + left+","+ right);
         // 更新基准值到顺序中的位置
         // ====以左侧为基准时的值===
         nums[left] = nums[pLeft];

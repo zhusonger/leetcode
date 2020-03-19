@@ -52,7 +52,7 @@ public class ListHelper {
         int[] nums = new int[len];
         Random random = new Random();
         for (int i = 0; i < len; i++) {
-            nums[i] = random.nextInt(20) - offset;
+            nums[i] = random.nextInt(20) + offset;
         }
         return nums;
     }

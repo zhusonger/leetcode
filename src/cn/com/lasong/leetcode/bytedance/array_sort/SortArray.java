@@ -54,6 +54,9 @@ public class SortArray {
         ListHelper.print(sortArray.insertSort(temp));
         System.arraycopy(nums, 0, temp, 0, len);
         ListHelper.print(sortArray.quickSort(temp));
+        System.arraycopy(nums, 0, temp, 0, len);
+        ListHelper.print(temp);
+        sortArray.aiaj(temp);
     }
     public List<Integer> sortArray(int[] nums) {
         List<Integer> list = bubbleSort(nums);
@@ -355,6 +358,26 @@ public class SortArray {
 
         nums[pLeft] = pivot;
         return pLeft;
+    }
+
+
+    public void aiaj(int[] nums) {
+        int len = nums.length;
+        int count = 0;
+        for (int i = 0; i < len; i++) {
+            count = 0;
+            for (int j = i + 1; j < len; j++) {
+                if (nums[j] > nums[j-1]) {
+                    count++;
+                    continue;
+                }
+                if (count > 0) {
+                    j--;
+                    System.out.println(i+","+j+", ai:" + nums[i]+", aj:"+nums[j]);
+                }
+                break;
+            }
+        }
     }
 
 }

@@ -36,6 +36,7 @@ public class LongestCommonPrefix {
 
         String minStr = null;
         List<String> others = new ArrayList<>();
+        // 找出最短的字符串
         for (String str : strs) {
             // 2。 存在空字符串, 没有公共前缀
             if (null == str) {
@@ -48,7 +49,10 @@ public class LongestCommonPrefix {
             }
             others.add(str);
         }
+        // 移除最短的字符串
         others.remove(minStr);
+        // 用最短的字符串取逐个比较, 一旦发现不一样的字符, 表示公共前缀结束, 返回最短前缀
+        // 如果最短字符串全都满足, 那最短字符串就是公共前缀
         if (minStr != null) {
             char[] array = minStr.toCharArray();
             for (int i = 0; i < array.length; i++) {

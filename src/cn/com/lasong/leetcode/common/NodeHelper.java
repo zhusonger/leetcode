@@ -31,6 +31,9 @@ public class NodeHelper {
         return head;
     }
 
+    public static TreeNode createTree(Integer[] array) {
+        return createTree(array, 0);
+    }
     public static TreeNode createTree(Integer[] array, int index) {
         if (null == array || array.length == 0 || index >= array.length || array[index] == null) {
             return null;

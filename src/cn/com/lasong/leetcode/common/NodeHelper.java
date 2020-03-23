@@ -49,10 +49,15 @@ public class NodeHelper {
         if (null == node) {
             return;
         }
-
+        StringBuilder builder = new StringBuilder();
         while (node != null) {
-            System.out.println(node.val);
+            int val = node.val;
             node = node.next;
+            builder.append(val);
+            if (null != node) {
+                builder.append(",");
+            }
         }
+        System.out.println(builder.toString());
     }
 }

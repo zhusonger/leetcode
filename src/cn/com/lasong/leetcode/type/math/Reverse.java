@@ -1,6 +1,4 @@
-package cn.com.lasong.leetcode.math;
-
-import com.sun.org.apache.regexp.internal.RE;
+package cn.com.lasong.leetcode.type.math;
 
 /**
  * Author: zhusong

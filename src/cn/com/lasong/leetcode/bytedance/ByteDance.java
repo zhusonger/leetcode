@@ -79,7 +79,7 @@ public class ByteDance {
         List<Integer> ans = new LinkedList<>();
         while (!stack.isEmpty() || null != ptr) {
             if (ptr != null) {
-                ans.add(0, ptr.val);
+//                ans.add(0, ptr.val);
                 stack.push(ptr);
 //                ptr = ptr.left;
                 ptr = ptr.right;

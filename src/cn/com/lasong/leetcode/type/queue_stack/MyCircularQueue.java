@@ -95,17 +95,17 @@ public class MyCircularQueue {
     }
 
     public boolean deQueue() {
-        int ptr = -1;
         if (head >= 0) {
-            ptr = (head + 1) % capacity;
+            int ptr = (head + 1) % capacity;
             ptr = head == tail ? -1 : ptr;
 
             array[head] = -1; // 置空
 
             head = ptr;
             tail = ptr < 0 ? -1 : tail;
+            return true;
         }
-        return ptr >= 0;
+        return false;
     }
 
     public boolean isEmpty() {

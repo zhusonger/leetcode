@@ -1,4 +1,4 @@
-package cn.com.lasong.leetcode.type.queue_stack;
+package cn.com.lasong.leetcode.card.queue_stack;
 
 /**
  * Author: zhusong

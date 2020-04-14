@@ -40,7 +40,7 @@ import java.util.Stack;
  * 输入: "{[]}"
  * 输出: true
  */
-public class StringIsValid {
+public class Stack_isValid {
 
     /**
      * 通过栈来实现一一对应
@@ -84,7 +84,7 @@ public class StringIsValid {
     }
 
     public static void main(String[] args) {
-        StringIsValid isValid = new StringIsValid();
+        Stack_isValid isValid = new Stack_isValid();
         boolean ans = isValid.isValid("()[]{}");
         System.out.println(ans);
         ans = isValid.isValid("(]");

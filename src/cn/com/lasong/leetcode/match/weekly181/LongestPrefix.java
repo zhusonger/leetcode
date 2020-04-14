@@ -57,11 +57,42 @@ public class LongestPrefix {
             chars[i] = (char) ('a' + random.nextInt(26));
         }
         String s = new String(chars);
-        String prefix = longestPrefix.longestPrefix(s);
+        String prefix = longestPrefix.longestPrefix("ssss");
 //        String prefix = longestPrefix.longestPrefix("level");
 //        String prefix = longestPrefix.longestPrefix("ababab");
 //        String prefix = longestPrefix.longestPrefix("leetcodeleet");
         System.out.println(prefix);
+    }
+
+    /**
+     * 使用hash来比较字符串是否相同
+     * 利用hash公式
+     * @param s
+     * @return
+     */
+    public String longestPrefix(String s) {
+        char[] array = s.toCharArray();
+        int len = array.length;
+        int startHash = 0;
+        int prefixHash = 0;
+        int h = 1;
+        int index = 0;
+        // hash = s[0]* (31^(n-1)) + s[1] * (31^(n-2)) +... + s[n]
+        for (int i = 0; i < len; i++, h *= 31) {
+            if (i + 1 == len) {
+                break;
+            }
+            startHash = startHash * 31 + array[i];
+            // 后缀前面的数值乘数累积
+            prefixHash = prefixHash + array[len - i - 1] * h;
+
+
+            if (startHash == prefixHash) {
+                index = i + 1;
+            }
+        }
+
+        return s.substring(0, index);
     }
 
     public String longestPrefix2(String s) {
@@ -113,7 +144,7 @@ public class LongestPrefix {
      * @param s
      * @return
      */
-    public String longestPrefix(String s) {
+    public String longestPrefix3(String s) {
         if (null == s || s.length() <= 1) {
             return "";
         }

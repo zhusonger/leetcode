@@ -232,7 +232,7 @@ public class SortArray {
     private void quickSortRecur(int[] nums, int left, int right) {
         if (left < right) {
             int pivotIndex = partitionRight(nums, left, right);
-            quickSortRecur(nums, 0, pivotIndex - 1);
+            quickSortRecur(nums, left, pivotIndex - 1);
             quickSortRecur(nums, pivotIndex + 1, right);
         }
     }

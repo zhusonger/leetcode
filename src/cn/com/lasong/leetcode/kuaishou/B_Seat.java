@@ -19,17 +19,17 @@ public class B_Seat {
     public static void main(String[] args) {
         B_Seat seat = new B_Seat();
         int ans;
-//        ans = seat.getAvailableSeat(new char[][]{
-//                new char[]{'*', '.', '*', '*', '.'},
-//                new char[]{'*', '.', '*', '*', '*'},
-//                new char[]{'*', '.', '*', '*', '.'},
-//        });
-//        System.out.println(ans);
-//        ans = seat.getAvailableSeat(new char[][]{
-//                new char[]{'*', '*'},
-//                new char[]{'*', '*'},
-//        });
-//        System.out.println(ans);
+        ans = seat.getAvailableSeat(new char[][]{
+                new char[]{'*', '.', '*', '*', '.'},
+                new char[]{'*', '.', '*', '*', '*'},
+                new char[]{'*', '.', '*', '*', '.'},
+        });
+        System.out.println(ans);
+        ans = seat.getAvailableSeat(new char[][]{
+                new char[]{'*', '*'},
+                new char[]{'*', '*'},
+        });
+        System.out.println(ans);
         ans = seat.getAvailableSeat(new char[][]{
                 new char[]{'.', '.'},
                 new char[]{'.', '*'},

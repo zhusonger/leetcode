@@ -40,6 +40,14 @@ public class ListHelper {
         print(ans, ans.length);
     }
 
+    public static void print(int[][] ans) {
+        int length = ans.length;
+        for (int i = 0; i < length; i++) {
+            print(ans[i], ans[i].length);
+        }
+
+    }
+
     /**
      * 生成随机数 数组
      * @param len

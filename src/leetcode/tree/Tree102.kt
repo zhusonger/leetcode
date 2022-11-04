@@ -1,4 +1,4 @@
-package tree
+package leetcode.tree
 
 import java.util.*
 
@@ -34,9 +34,9 @@ class Tree102 {
 }
 
 //fun main() {
-//    val tree = Tree102()
+//    val leetcode.tree = Tree102()
 //    var level = 0
-//    tree.levelOrder(createBinaryTree(arrayOf(3,9,20,null,null,15,7))).forEach { levelAll->
+//    leetcode.tree.levelOrder(createBinaryTree(arrayOf(3,9,20,null,null,15,7))).forEach { levelAll->
 //        println("level$level => ${levelAll.joinToString()}")
 //        level++
 //    }

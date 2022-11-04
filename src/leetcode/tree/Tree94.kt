@@ -1,4 +1,4 @@
-package tree
+package leetcode.tree
 
 // 给定一个二叉树的根节点 root ，返回 它的 中序 遍历 。
 // 输入：root = [1,null,2,3]

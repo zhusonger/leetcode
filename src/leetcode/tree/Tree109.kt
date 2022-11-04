@@ -1,4 +1,4 @@
-package tree
+package leetcode.tree
 
 // 给定一个单链表的头节点  head ，其中的元素 按升序排序 ，将其转换为高度平衡的二叉搜索树。
 //

@@ -1,4 +1,4 @@
-package tree
+package leetcode.tree
 
 // 给你两棵二叉树的根节点 p 和 q ，编写一个函数来检验这两棵树是否相同。
 //
@@ -16,8 +16,8 @@ class Tree100 {
 }
 
 //fun main() {
-//    val tree = Tree100()
-//    println(tree.isSameTree(createBinaryTree(arrayOf(1,2,3)), createBinaryTree(arrayOf(1,2,3))))
+//    val leetcode.tree = Tree100()
+//    println(leetcode.tree.isSameTree(createBinaryTree(arrayOf(1,2,3)), createBinaryTree(arrayOf(1,2,3))))
 //
-//    println(tree.isSameTree(createBinaryTree(arrayOf(1,2)), createBinaryTree(arrayOf(1,null,2))))
+//    println(leetcode.tree.isSameTree(createBinaryTree(arrayOf(1,2)), createBinaryTree(arrayOf(1,null,2))))
 //}

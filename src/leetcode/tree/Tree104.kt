@@ -1,4 +1,4 @@
-package tree
+package leetcode.tree
 
 // 给定一个二叉树，找出其最大深度。
 //
